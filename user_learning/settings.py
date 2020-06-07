@@ -27,8 +27,12 @@ SECRET_KEY = '0@x@tj42()(p_q%#oo5t5+t#_6ryf)$mb!=68y)k)l-x)#!dd6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['django-admin-login-register.herokuapp.com',
                  '127.0.0.1',]
+=======
+ALLOWED_HOSTS = []
+>>>>>>> 028c03d8ed759afe4f1e200167a1f79e3ebb93f8
 
 
 # Application definition
@@ -44,7 +48,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+<<<<<<< HEAD
     'whitenoise.middleware.WhiteNoiseMiddleware',
+=======
+>>>>>>> 028c03d8ed759afe4f1e200167a1f79e3ebb93f8
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -127,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -138,3 +146,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+=======
+STATICFILES_DIRS = [
+    STATIC_DIR
+]
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+LOGIN_URL = '/basic_app/user_login'
+>>>>>>> 028c03d8ed759afe4f1e200167a1f79e3ebb93f8
